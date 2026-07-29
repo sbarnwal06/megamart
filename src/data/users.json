@@ -1,0 +1,14 @@
+[
+    {
+      "id": 1,
+      "name": "Demo Shopper",
+      "email": "demo@megamart.com",
+      "password": "123456"
+    },
+    {
+      "id": 2,
+      "name": "Alex Morgan",
+      "email": "alex@megamart.com",
+      "password": "123456"
+    }
+  ]
