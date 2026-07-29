@@ -28,8 +28,8 @@ function Header() {
       <header className="header">
         <div className="container header-main">
           <Link to="/dashboard" className="brand">
-            <span className="brand-mark">M</span>
-            <span><strong>Mega</strong>Mart<small>Everything in one place</small></span>
+            <span className="brand-mark">K</span>
+            <span><strong>Krish</strong>Mart<small>Everything in one place</small></span>
           </Link>
 
           <Link to="/products" className="header-search">
