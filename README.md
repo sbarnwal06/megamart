@@ -1,18 +1,127 @@
-# React + Vite
+# MegaMart - React Redux E-Commerce Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+MegaMart is a hypermarket-style e-commerce web application built using React.js and Redux Toolkit.
 
-Currently, two official plugins are available:
+The application represents a large online hypermarket where users can browse products from different categories, search and filter products, view product details, add products to their cart, adjust quantities, manage their wishlist and proceed through the shopping flow.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+The project is being developed in two phases:
 
-## React Compiler
+1. Frontend using React.js, Redux Toolkit and local JSON data
+2. Backend using Node.js, Express.js and MongoDB
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+The frontend will be completed and deployed on Netlify first. Once the frontend is stable, the local JSON data and mock authentication will be replaced with real backend APIs.
 
-Note: This will impact Vite dev & build performances.
+---
 
-## Expanding the ESLint configuration
+## Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Authentication
+
+- Login screen
+- User authentication
+- Protected routes
+- Logout
+- User information stored in Redux
+- Authentication persistence using LocalStorage
+
+### Dashboard
+
+- Welcome section
+- Product/category highlights
+- Featured products
+- Popular products
+- Quick navigation to shopping sections
+
+### Product Management
+
+- Product listing
+- Product categories
+- Product details
+- Product cards
+- Product images
+- Product price
+- Original price
+- Discount
+- Rating
+- Reviews
+- Stock information
+- Brand
+- Product description
+
+### Search and Filter
+
+- Search products
+- Filter products by category
+- Sort products
+- Featured products
+- Price low to high
+- Price high to low
+- Top-rated products
+- Best discount products
+
+### Shopping Cart
+
+- Add product to cart
+- Remove product from cart
+- Increase quantity
+- Decrease quantity
+- Cart item count
+- Product subtotal
+- Total cart amount
+- Order summary
+
+### Wishlist
+
+- Add product to wishlist
+- Remove product from wishlist
+- Wishlist state managed through Redux
+
+### UI / UX
+
+- Responsive design
+- Header
+- Navigation menu
+- Category navigation
+- Footer
+- Loading state
+- Toast notifications
+- Product details page
+- 404 / Not Found page
+
+---
+
+# Technology Stack
+
+## Frontend
+
+- React.js
+- Vite
+- JavaScript
+- CSS
+
+## State Management
+
+- Redux Toolkit
+- React Redux
+
+## Routing
+
+- React Router DOM
+
+## HTTP Client
+
+- Axios
+
+Axios is included so that the current local JSON data can later be replaced with real REST APIs.
+
+## Notifications
+
+- React Hot Toast
+
+## Current Data Source
+
+Currently the application uses local JSON data:
+
+```text
+src/data/products.json
+src/data/users.json
