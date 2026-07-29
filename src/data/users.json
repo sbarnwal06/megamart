@@ -2,13 +2,13 @@
     {
       "id": 1,
       "name": "Demo Shopper",
-      "email": "demo@megamart.com",
+      "email": "demo@krishmart.com",
       "password": "123456"
     },
     {
       "id": 2,
       "name": "Alex Morgan",
-      "email": "alex@megamart.com",
+      "email": "alex@krishmart.com",
       "password": "123456"
     }
   ]

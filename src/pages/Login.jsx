@@ -11,7 +11,7 @@ function Login() {
   const dispatch = useDispatch()
   const navigate = useNavigate()
   const location = useLocation()
-  const [form, setForm] = useState({ email: 'demo@megamart.com', password: '123456' })
+  const [form, setForm] = useState({ email: 'demo@krishmart.com', password: '123456' })
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState('')
 
@@ -36,7 +36,7 @@ function Login() {
   return (
     <main className="login-page">
       <div className="login-visual">
-        <div className="login-logo"><span>M</span> MegaMart</div>
+        <div className="login-logo"><span>M</span> KrishMart</div>
         <div className="login-copy">
           <span className="eyebrow">YOUR EVERYDAY HYPERMARKET</span>
           <h1>Everything you need.<br /><em>All in one cart.</em></h1>
@@ -48,13 +48,13 @@ function Login() {
       <div className="login-panel">
         <form className="login-card" onSubmit={submit}>
           <span className="eyebrow">WELCOME BACK</span>
-          <h2>Sign in to MegaMart</h2>
+          <h2>Sign in to KrishMart</h2>
           <p className="muted">Access your orders, cart and personalised shopping.</p>
           <label>Email address<input type="email" value={form.email} onChange={e => setForm({...form, email:e.target.value})} required /></label>
           <label>Password<input type="password" value={form.password} onChange={e => setForm({...form, password:e.target.value})} required /></label>
           {error && <div className="form-error">{error}</div>}
           <button className="login-btn" disabled={loading}>{loading ? 'Signing in...' : 'Sign in →'}</button>
-          <div className="demo-box"><strong>Demo account</strong><br />demo@megamart.com · 123456</div>
+          <div className="demo-box"><strong>Demo account</strong><br />demo@krishmart.com · 123456</div>
         </form>
       </div>
     </main>

@@ -1,8 +1,8 @@
 import { createSlice } from '@reduxjs/toolkit'
 
-const savedWishlist = JSON.parse(localStorage.getItem('megamart_wishlist') || '[]')
+const savedWishlist = JSON.parse(localStorage.getItem('krishmart_wishlist') || '[]')
 
-const persist = (items) => localStorage.setItem('megamart_wishlist', JSON.stringify(items))
+const persist = (items) => localStorage.setItem('krishmart_wishlist', JSON.stringify(items))
 
 const wishlistSlice = createSlice({
   name: 'wishlist',

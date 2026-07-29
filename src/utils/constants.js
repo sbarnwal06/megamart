@@ -1,4 +1,4 @@
-export const STORE_NAME = 'MegaMart'
+export const STORE_NAME = 'KrishMart'
 
 export const categories = [
   'All', 'Groceries', 'Electronics', 'Mobiles', 'Fashion', 'Beauty',

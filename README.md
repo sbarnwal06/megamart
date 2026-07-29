@@ -1,6 +1,6 @@
-# MegaMart - React Redux E-Commerce Application
+# KrishMart - React Redux E-Commerce Application
 
-MegaMart is a hypermarket-style e-commerce web application built using React.js and Redux Toolkit.
+KrishMart is a hypermarket-style e-commerce web application built using React.js and Redux Toolkit.
 
 The application represents a large online hypermarket where users can browse products from different categories, search and filter products, view product details, add products to their cart, adjust quantities, manage their wishlist and proceed through the shopping flow.
 
