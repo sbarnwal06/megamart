@@ -149,6 +149,18 @@ img { max-width: 100%; display: block; }
 .qty-control { display:flex; border:1px solid #dfe5ee; border-radius:8px; overflow:hidden; }
 .qty-control button { width:30px; border:0; background:#f6f8fb; }
 .qty-control span { min-width:30px; display:grid; place-items:center; font-size:12px; }
+.quantity-controls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.quantity-count {
+  font-weight: 600;
+  font-size: 1.1rem;
+  min-width: 20px;
+  text-align: center;
+}
 .cart-line-total { font-weight:800; white-space:nowrap; }
 .remove-btn, .clear-cart { border:0; background:transparent; color:#e05161; font-size:11px; }
 .cart-summary { background:#fff; border:1px solid #e7ecf2; border-radius:16px; padding:22px; position:sticky; top:145px; }

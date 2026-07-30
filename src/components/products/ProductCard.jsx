@@ -1,19 +1,33 @@
 import { Link } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
-import { addToCart } from '../../redux/slices/cartSlice'
+import { addToCart, increment, decrement  } from '../../redux/slices/cartSlice'
 import { toggleWishlist } from '../../redux/slices/wishlistSlice'
 import { formatPrice, getDiscountedPrice } from '../../utils/helpers'
 import { toast } from 'react-hot-toast'
+import Button from '../common/Button'
 
 function ProductCard({ product }) {
   const dispatch = useDispatch()
   const liked = useSelector(state => state.wishlist.items.some(item => item.id === product.id))
   const salePrice = getDiscountedPrice(product.price, product.discount)
+  const cartItem = useSelector(state => state.cart.items.find(item => item.id === product?.id))
+  const quantity = cartItem ? cartItem?.quantity : 0
 
   const handleCart = () => {
     dispatch(addToCart(product))
     toast.success(`${product.name} added to cart`)
   }
+
+  const handleDecrement = () => {
+      dispatch(decrement(product.id))
+      if (quantity === 1) {
+        toast.error('Removed from cart')
+      }
+    }
+  
+    const handleIncrement = () => {
+      dispatch(increment(product.id))
+    }
 
   return (
     <article className="product-card">
@@ -38,7 +52,17 @@ function ProductCard({ product }) {
           <strong>{formatPrice(salePrice)}</strong>
           {product.discount > 0 && <del>{formatPrice(product.price)}</del>}
         </div>
-        <button className="add-cart" onClick={handleCart}>Add to Cart</button>
+        {quantity ? 
+        (
+          <div className="quantity-controls">
+          <Button onClick={handleDecrement}>-</Button>
+          <span className="quantity-count">{quantity}</span>
+          <Button onClick={handleIncrement}>+</Button>
+        </div>
+        )
+         : <button className="add-cart" onClick={handleCart}>Add to Cart</button>
+        }
+        
       </div>
     </article>
   )
